@@ -71,11 +71,12 @@ $verba-accent: mat.define-palette((
   )
 ));
 
-$verba-theme: mat.define-dark-theme((
+$verba-theme: mat.define-theme((
   color: (
     primary: $verba-primary,
     accent: $verba-accent,
     warn: $color-warn,
+    theme-type: dark,
   ),
   typography: mat.typography-config(),
   density: 0,

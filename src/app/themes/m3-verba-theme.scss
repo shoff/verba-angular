@@ -1,0 +1,147 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+// Assuming colors are defined in _colors.scss
+@use 'colors' as c;
+
+$_verba_palettes: (
+  // M3 Palette Definitions
+  primary-palette: (
+    0: lighten(c.$color-darkest-gray, 50%), // Lightest
+    10: lighten(c.$color-darkest-gray, 45%),
+    20: lighten(c.$color-darkest-gray, 40%),
+    25: lighten(c.$color-darkest-gray, 35%),
+    30: lighten(c.$color-darkest-gray, 30%),
+    35: lighten(c.$color-darkest-gray, 25%),
+    40: lighten(c.$color-darkest-gray, 20%),
+    50: c.$color-darkest-gray,             // Mid-point base color
+    60: darken(c.$color-darkest-gray, 10%),
+    70: darken(c.$color-darkest-gray, 15%),
+    80: darken(c.$color-darkest-gray, 20%),
+    90: darken(c.$color-darkest-gray, 25%),
+    95: darken(c.$color-darkest-gray, 30%),
+    98: darken(c.$color-darkest-gray, 35%),
+    99: darken(c.$color-darkest-gray, 40%),
+    100: darken(c.$color-darkest-gray, 45%) // Darkest
+  ),
+  
+  // Secondary Palette
+  secondary-palette: (
+    0: lighten(c.$color-bright-blue, 50%), // Lightest
+    10: lighten(c.$color-bright-blue, 45%),
+    20: lighten(c.$color-bright-blue, 40%),
+    25: lighten(c.$color-bright-blue, 35%),
+    30: lighten(c.$color-bright-blue, 30%),
+    35: lighten(c.$color-bright-blue, 25%),
+    40: lighten(c.$color-bright-blue, 20%),
+    50: c.$color-bright-blue,             // Mid-point base color
+    60: darken(c.$color-bright-blue, 10%),
+    70: darken(c.$color-bright-blue, 15%),
+    80: darken(c.$color-bright-blue, 20%),
+    90: darken(c.$color-bright-blue, 25%),
+    95: darken(c.$color-bright-blue, 30%),
+    98: darken(c.$color-bright-blue, 35%),
+    99: darken(c.$color-bright-blue, 40%),
+    100: darken(c.$color-bright-blue, 45%) // Darkest
+  ),
+  
+  // Neutral Palette
+  neutral-palette: (
+    0: lighten(c.$color-gray-1, 50%), // Lightest
+    10: lighten(c.$color-gray-1, 45%),
+    20: lighten(c.$color-gray-1, 40%),
+    25: lighten(c.$color-gray-1, 35%),
+    30: lighten(c.$color-gray-1, 30%),
+    35: lighten(c.$color-gray-1, 25%),
+    40: lighten(c.$color-gray-1, 20%),
+    50: c.$color-gray-1,             // Mid-point base color
+    60: darken(c.$color-gray-1, 10%),
+    70: darken(c.$color-gray-1, 15%),
+    80: darken(c.$color-gray-1, 20%),
+    90: darken(c.$color-gray-1, 25%),
+    95: darken(c.$color-gray-1, 30%),
+    98: darken(c.$color-gray-1, 35%),
+    99: darken(c.$color-gray-1, 40%),
+    100: darken(c.$color-gray-1, 45%) // Darkest
+  ),
+  
+  // Neutral-Variant Palette
+  neutral-variant-palette: (
+    0: lighten(c.$color-gray-2, 50%), // Lightest
+    10: lighten(c.$color-gray-2, 45%),
+    20: lighten(c.$color-gray-2, 40%),
+    25: lighten(c.$color-gray-2, 35%),
+    30: lighten(c.$color-gray-2, 30%),
+    35: lighten(c.$color-gray-2, 25%),
+    40: lighten(c.$color-gray-2, 20%),
+    50: c.$color-gray-2,             // Mid-point base color
+    60: darken(c.$color-gray-2, 10%),
+    70: darken(c.$color-gray-2, 15%),
+    80: darken(c.$color-gray-2, 20%),
+    90: darken(c.$color-gray-2, 25%),
+    95: darken(c.$color-gray-2, 30%),
+    98: darken(c.$color-gray-2, 35%),
+    99: darken(c.$color-gray-2, 40%),
+    100: darken(c.$color-gray-2, 45%) // Darkest
+  ),
+  error-palette: (
+    0: lighten(c.$color-error, 50%),   // Lightest red
+    10: lighten(c.$color-error, 45%),
+    20: lighten(c.$color-error, 40%),
+    25: lighten(c.$color-error, 35%),
+    30: lighten(c.$color-error, 30%),
+    35: lighten(c.$color-error, 25%),
+    40: lighten(c.$color-error, 20%),
+    50: c.$color-error,               // Base color
+    60: darken(c.$color-error, 10%),
+    70: darken(c.$color-error, 15%),
+    80: darken(c.$color-error, 20%),
+    90: darken(c.$color-error, 25%),
+    95: darken(c.$color-error, 30%),
+    98: darken(c.$color-error, 35%),
+    99: darken(c.$color-error, 40%),
+    100: darken(c.$color-error, 45%)  // Darkest red
+  ),
+  tertiary-palette: (
+    0: lighten(c.$color-bright-purple, 50%),  // Lightest
+    10: lighten(c.$color-bright-purple, 45%),
+    20: lighten(c.$color-bright-purple, 40%),
+    25: lighten(c.$color-bright-purple, 35%),
+    30: lighten(c.$color-bright-purple, 30%),
+    35: lighten(c.$color-bright-purple, 25%),
+    40: lighten(c.$color-bright-purple, 20%),
+    50: c.$color-bright-purple,              // Mid-point base color
+    60: darken(c.$color-bright-purple, 10%),
+    70: darken(c.$color-bright-purple, 15%),
+    80: darken(c.$color-bright-purple, 20%),
+    90: darken(c.$color-bright-purple, 25%),
+    95: darken(c.$color-bright-purple, 30%),
+    98: darken(c.$color-bright-purple, 35%),
+    99: darken(c.$color-bright-purple, 40%),
+    100: darken(c.$color-bright-purple, 45%)  // Darkest
+    )
+);
+
+$_rest: (
+    secondary: map.get($_verba_palettes, secondary-palette),
+    neutral: map.get($_verba_palettes, neutral-palette),
+    neutral-variant: map.get($_verba_palettes, neutral-variant-palette),
+    error: map.get($_verba_palettes, error-palette),
+);
+
+$_primary: map.merge(map.get($_verba_palettes, primary-palette), $_rest);
+$_secondary: map.merge(map.get($_verba_palettes, secondary-palette), $_rest);
+$_tertiary: map.merge(map.get($_verba_palettes, tertiary-palette), $_rest);
+
+$verba-theme: mat.define-theme(
+    (
+        color: (
+            theme-type: dark,
+            primary: $_primary,
+            // secondary: $_secondary,
+            tertiary: $_tertiary,
+            use-system-variables: true
+        ),
+        typography: (use-system-variables: true,)
+    )
+)

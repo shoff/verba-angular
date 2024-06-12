@@ -32,13 +32,11 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/app/themes/verba-theme.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src",
-                "./node_modules"
+                "src"
               ]
             },
             "scripts": []
@@ -98,13 +96,11 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/app/themes/verba-theme.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src",
-                "./node_modules"
+                "src"
               ]
             },
             "scripts": []

@@ -1,37 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
-@use './app/themes/verba-theme.scss' as verba-theme;
+@use './app/themes/m3-verba-theme.scss';
+@use './app/themes/colors' as colors;
+
+// @use './app/themes/verba-theme.scss' as verba-theme;
 
 @include mat.core();
 
-html, body { height: 100%; }
-body 
-{ 
-    margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background-color: #0d1117;
-    color: #e6e6e6;
-    padding: 1.5rem;
+html {
+  body {
+    height: 100%;
+    margin: 2.5rem;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: colors.$color-darkest-gray;
+    color: colors.$color-light-gray-3;
+  }
 }
 
-.verba-theme {
-    @include mat.all-component-themes(verba-theme.$dark-theme);
-    @include mat.all-component-colors(verba-theme.$dark-theme);
-    @include mat.button-theme(verba-theme.$dark-theme);
-}
+// .verba-theme {
+//   @include mat.all-component-themes(verba-theme.$dark-theme);
+//   @include mat.all-component-colors(verba-theme.$dark-theme);
+//   @include mat.button-theme(verba-theme.$dark-theme);
+// }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  .chat-container {
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh - 64px); // Adjust height based on header and footer
-  }
-  
-  chat-interface, relevant-context, document-viewer {
-    flex: 1;
-    margin: 8px;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 64px); // Adjust height based on header and footer
+}
+
+chat-interface,
+relevant-context,
+document-viewer {
+  flex: 1;
+  margin: 8px;
+}
