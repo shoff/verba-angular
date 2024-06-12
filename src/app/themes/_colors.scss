@@ -1,0 +1,147 @@
+// Define color variables
+$color-darkest-gray: #0d1117;
+$color-dark-gray-1: #161b22;
+$color-dark-gray-2: #333333;
+$color-dark-gray-3: #3c3c3c;
+$color-bright-blue: #58a6ff;
+$color-gray-1: #999999;
+$color-gray-2: #a3a3a3;
+$color-light-gray-1: #a6adbc;
+$color-bright-purple: #bb86fc;
+$color-light-gray-2: #e5e7eb;
+$color-light-gray-3: #e6e6e6;
+$color-white: #ffffff;
+$color-dark-gray-4: #131b26;
+$color-gray-3: #666666;
+$color-gray-4: #a3a3a3;
+$color-light-purple: #bd87f7;
+
+// Reusable color classes
+.darkest-gray {
+  color: $color-darkest-gray;
+}
+
+.dark-gray-1 {
+  color: $color-dark-gray-1;
+}
+
+.dark-gray-2 {
+  color: $color-dark-gray-2;
+}
+
+.dark-gray-3 {
+  color: $color-dark-gray-3;
+}
+
+.bright-blue {
+  color: $color-bright-blue;
+}
+
+.gray-1 {
+  color: $color-gray-1;
+}
+
+.gray-2 {
+  color: $color-gray-2;
+}
+
+.light-gray-1 {
+  color: $color-light-gray-1;
+}
+
+.bright-purple {
+  color: $color-bright-purple;
+}
+
+.light-gray-2 {
+  color: $color-light-gray-2;
+}
+
+.light-gray-3 {
+  color: $color-light-gray-3;
+}
+
+.white {
+  color: $color-white;
+}
+
+.dark-gray-4 {
+  color: $color-dark-gray-4;
+}
+
+.gray-3 {
+  color: $color-gray-3;
+}
+
+.gray-4 {
+  color: $color-gray-4;
+}
+
+.light-purple {
+  color: $color-light-purple;
+}
+
+// Reusable background color classes
+.bg-darkest-gray {
+  background-color: $color-darkest-gray;
+}
+
+.bg-dark-gray-1 {
+  background-color: $color-dark-gray-1;
+}
+
+.bg-dark-gray-2 {
+  background-color: $color-dark-gray-2;
+}
+
+.bg-dark-gray-3 {
+  background-color: $color-dark-gray-3;
+}
+
+.bg-bright-blue {
+  background-color: $color-bright-blue;
+}
+
+.bg-gray-1 {
+  background-color: $color-gray-1;
+}
+
+.bg-gray-2 {
+  background-color: $color-gray-2;
+}
+
+.bg-light-gray-1 {
+  background-color: $color-light-gray-1;
+}
+
+.bg-bright-purple {
+  background-color: $color-bright-purple;
+}
+
+.bg-light-gray-2 {
+  background-color: $color-light-gray-2;
+}
+
+.bg-light-gray-3 {
+  background-color: $color-light-gray-3;
+}
+
+.bg-white {
+  background-color: $color-white;
+}
+
+.bg-dark-gray-4 {
+  background-color: $color-dark-gray-4;
+}
+
+.bg-gray-3 {
+  background-color: $color-gray-3;
+}
+
+.bg-gray-4 {
+  background-color: $color-gray-4;
+}
+
+.bg-light-purple {
+  background-color: $color-light-purple;
+}

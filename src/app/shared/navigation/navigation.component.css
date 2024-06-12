@@ -1,0 +1,46 @@
+.toolbar {
+  background-color: #0d1017;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-button {
+  color: #a6adbc;
+  margin-right: 8px;
+  background-color: #3c3c3c;
+  height: 3rem;
+  font-size: 0.875rem;
+}
+.nav-button .mat-icon {
+  margin-right: 4px;
+}
+.nav-button:hover {
+  background-color: #6200ea;
+}
+.nav-button.active {
+  background-color: #6200ea;
+  color: #ffffff;
+}
+
+button {
+  border-radius: 10px;
+}
+
+.logo {
+  width: 80px;
+  padding: 0.3rem;
+  margin-right: 1rem;
+}
+
+mat-icon {
+  color: #ffffff;
+}/*# sourceMappingURL=navigation.component.css.map */

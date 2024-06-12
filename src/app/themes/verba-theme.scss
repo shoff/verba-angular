@@ -1,0 +1,90 @@
+@use 'colors' as colors;
+@use '@angular/material' as mat;
+
+$color-primary: mat.define-palette(mat.$blue-palette, 500, 100, 700);
+$color-accent: mat.define-palette(mat.$purple-palette, 500, 100, 700);
+$color-warn: mat.define-palette(mat.$red-palette);
+
+$verba-primary: mat.define-palette((
+  50: colors.$color-light-gray-2,
+  100: colors.$color-light-gray-3,
+  200: colors.$color-gray-4,
+  300: colors.$color-gray-2,
+  400: colors.$color-gray-1,
+  500: colors.$color-dark-gray-2,
+  600: colors.$color-dark-gray-3,
+  700: colors.$color-dark-gray-1,
+  800: colors.$color-darkest-gray,
+  900: colors.$color-dark-gray-4,
+  A100: colors.$color-bright-blue,
+  A200: colors.$color-bright-purple,
+  A400: colors.$color-light-purple,
+  A700: colors.$color-bright-blue,
+  contrast: (
+    50: colors.$color-dark-gray-1,
+    100: colors.$color-dark-gray-2,
+    200: colors.$color-dark-gray-3,
+    300: colors.$color-dark-gray-4,
+    400: colors.$color-light-gray-1,
+    500: colors.$color-white,
+    600: colors.$color-white,
+    700: colors.$color-white,
+    800: colors.$color-white,
+    900: colors.$color-white,
+    A100: colors.$color-dark-gray-2,
+    A200: colors.$color-dark-gray-3,
+    A400: colors.$color-dark-gray-4,
+    A700: colors.$color-light-gray-1,
+  )
+));
+
+$verba-accent: mat.define-palette((
+  50: colors.$color-light-gray-2,
+  100: colors.$color-light-gray-3,
+  200: colors.$color-gray-4,
+  300: colors.$color-gray-2,
+  400: colors.$color-gray-1,
+  500: colors.$color-dark-gray-2,
+  600: colors.$color-dark-gray-3,
+  700: colors.$color-dark-gray-1,
+  800: colors.$color-darkest-gray,
+  900: colors.$color-dark-gray-4,
+  A100: colors.$color-bright-blue,
+  A200: colors.$color-bright-purple,
+  A400: colors.$color-light-purple,
+  A700: colors.$color-bright-blue,
+  contrast: (
+    50: colors.$color-dark-gray-1,
+    100: colors.$color-dark-gray-2,
+    200: colors.$color-dark-gray-3,
+    300: colors.$color-dark-gray-4,
+    400: colors.$color-light-gray-1,
+    500: colors.$color-white,
+    600: colors.$color-white,
+    700: colors.$color-white,
+    800: colors.$color-white,
+    900: colors.$color-white,
+    A100: colors.$color-dark-gray-2,
+    A200: colors.$color-dark-gray-3,
+    A400: colors.$color-dark-gray-4,
+    A700: colors.$color-light-gray-1,
+  )
+));
+
+$verba-theme: mat.define-dark-theme((
+  color: (
+    primary: $verba-primary,
+    accent: $verba-accent,
+    warn: $color-warn,
+  ),
+  typography: mat.typography-config(),
+  density: 0,
+));
+
+@include mat.core();
+
+.verba-theme {
+  @include mat.all-component-themes($verba-theme);
+  @include mat.all-component-colors($verba-theme);
+  @include mat.button-theme($verba-theme);
+}
